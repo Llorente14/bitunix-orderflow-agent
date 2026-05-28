@@ -1,0 +1,45 @@
+pairs:
+  - BTCUSDT
+  - ETHUSDT
+  - BNBUSDT
+  - SOLUSDT
+  - XRPUSDT
+  - DOGEUSDT
+  - ADAUSDT
+  - AVAXUSDT
+  - LINKUSDT
+  - DOTUSDT
+
+default_threshold:
+  buy: 20
+  sell: 20
+
+pair_override:
+  BTCUSDT:
+    buy: 18
+    sell: 18
+  DOGEUSDT:
+    buy: 25
+    sell: 25
+
+bitunix:
+  base_url: https://fapi.bitunix.com
+  depth_endpoint: /api/v1/futures/market/depth
+  kline_endpoint: /api/v1/futures/market/kline
+  orderbook_limit: 20
+  kline_limit: 5
+  request_timeout_seconds: 10
+  retry_attempts: 3
+  retry_backoff_seconds:
+    - 2
+    - 4
+    - 8
+
+signals:
+  cooldown_minutes: 30
+  discord_rate_limit_seconds: 2
+
+runtime:
+  timezone: Asia/Jakarta
+  state_path: state.json
+
