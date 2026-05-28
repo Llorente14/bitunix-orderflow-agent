@@ -15,6 +15,14 @@ copy .env.example .env
 python -m src.main
 ```
 
+## Python Version
+
+GitHub Actions defaults to Python 3.11, matching the PRD. This laptop does not
+currently expose `python` or `py` globally in PowerShell. The local `.venv`
+available in this repo uses Python 3.12.13.
+
+The manual GitHub Actions workflow lets you choose Python 3.11, 3.12, or 3.13.
+
 ## Configuration
 
 - `config.yaml` stores pairs, thresholds, Bitunix API settings, and runtime settings.
